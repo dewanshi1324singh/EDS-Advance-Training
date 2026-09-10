@@ -1,0 +1,45 @@
+/*
+ * Social Links — structural + WKND styling. Row of dark icon squares with
+ * light glyphs, matching the WKND footer "Follow Us" treatment.
+ */
+.social-links .social-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links .social-links-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-color);
+  color: #ebebeb;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-links .social-links-item:hover,
+.social-links .social-links-item:focus-visible {
+  opacity: 0.8;
+}
+
+/* text fallback when no matching icon exists */
+/* stylelint-disable-next-line no-descending-specificity */
+.social-links .social-links-item:not(:has(img)) {
+  width: auto;
+  padding: 0 12px;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.social-links .social-links-item img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
