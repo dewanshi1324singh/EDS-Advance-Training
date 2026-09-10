@@ -6,10 +6,15 @@
 .article-list .article-list-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px 14px;
+  gap: 40px 24px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.article-list .article-list-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .article-list .article-list-card-image {
@@ -46,10 +51,16 @@
 }
 
 .article-list .article-list-card-body p {
-  margin: 16px 0 0;
+  margin: 12px 0 0;
   font-size: 14px;
   line-height: 21px;
   color: rgb(105 105 105);
+
+  /* Clamp to 3 lines so every card keeps a uniform height and the grid stays even */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .article-list .article-list-empty {
