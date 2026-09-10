@@ -1,0 +1,36 @@
+{
+  "variantName": "carousel",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-09T12:23:23.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/ca/en/adventures/bali-surf-camp.html",
+    "discoveredDuring": "site-catalog",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "imagePattern": "large",
+    "purpose": "image-banner-carousel",
+    "structure": "one or more image slides with optional content overlay"
+  },
+  "contentPattern": {
+    "structure": "one row per slide: image cell + optional content cell",
+    "imageCount": 1
+  },
+  "options": [
+    { "class": "minimal-dark-withimg", "label": "Minimal Dark Withimg" },
+    { "class": "minimal-dark-withimg-1", "label": "Minimal Dark Withimg 1" },
+    { "class": "minimal-dark-withimg-2", "label": "Minimal Dark Withimg 2" },
+    { "class": "minimal-dark-withimg-3", "label": "Minimal Dark Withimg 3" }
+  ],
+  "memberVariantIds": ["carousel-minimal-dark-withimg", "carousel-minimal-dark-withimg-1", "carousel-minimal-dark-withimg-2", "carousel-minimal-dark-withimg-3"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd.site/ca/en/adventures/bali-surf-camp.html", "screenshot": ".blocks/carousel-minimal-dark-withimg/screenshots/block-4cbf8bfda15e.jpg" }
+    ],
+    "reuseCount": 1
+  }
+}

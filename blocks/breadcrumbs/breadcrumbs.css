@@ -1,0 +1,39 @@
+/*
+ * Breadcrumbs — structural/functional CSS only (excat-generated).
+ * Horizontal trail with separators between crumbs. No brand color/typography
+ * tokens; those are applied by the design pass.
+ */
+.breadcrumbs .breadcrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs .breadcrumbs-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Separator between crumbs (not before the first). */
+.breadcrumbs .breadcrumbs-item + .breadcrumbs-item::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-right: 8px;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent currentcolor;
+}
+
+.breadcrumbs .breadcrumbs-item a {
+  text-decoration: none;
+}
+
+.breadcrumbs .breadcrumbs-current {
+  font-weight: 700;
+}

@@ -25,3 +25,14 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* --- Option (excat-generated): minimal-dark-withimg-1 — borderless image-led cards --- */
+/* Additive: absent → default bordered cards; present → flush image cards, no border/box. */
+.cards.minimal-dark-withimg-1 > ul > li {
+  border: 0;
+  background-color: transparent;
+}
+
+.cards.minimal-dark-withimg-1 .cards-card-body {
+  margin: 12px 0 0;
+}
