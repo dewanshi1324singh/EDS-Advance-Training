@@ -351,3 +351,76 @@ main > .section > div > h2 {
   background-position: left bottom;
   background-size: 84px 2px;
 }
+
+/* ============================================================
+   Magazine article template — reading experience
+   Scoped to body.magazine-article so listings/home are unaffected.
+   ============================================================ */
+
+/* Constrain the article's default-content column to a comfortable reading
+   width, while leaving block sections (hero image, author-profile, etc.)
+   free to size themselves. */
+body.magazine-article main > .section > .default-content-wrapper {
+  max-width: 740px;
+  margin-inline: auto;
+}
+
+/* Article title: a touch more room, tighter to its byline. */
+body.magazine-article main > .section > .default-content-wrapper h1 {
+  margin-bottom: 0.15em;
+}
+
+/* Byline directly under the title. */
+body.magazine-article main > .section > .default-content-wrapper h4 {
+  margin-top: 0;
+  color: rgb(105 105 105);
+}
+
+/* Article body copy — airy, readable. */
+body.magazine-article main > .section > .default-content-wrapper p {
+  font-size: var(--body-font-size-m);
+  line-height: 1.9;
+}
+
+/* Section subheadings inside the body get breathing room above. */
+body.magazine-article main > .section > .default-content-wrapper h2 {
+  margin-top: 1.2em;
+}
+
+/* Inline article images: full reading-column width, slight vertical rhythm. */
+body.magazine-article main > .section > .default-content-wrapper picture img {
+  width: 100%;
+  height: auto;
+  margin: 12px 0;
+}
+
+/* Pull-quote: centered, larger, accent bar. */
+body.magazine-article main .section blockquote {
+  max-width: 740px;
+  margin: 32px auto;
+  padding: 8px 0 8px 24px;
+  border-left: 4px solid var(--accent-color);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Author profile + social links read as an article footer: centered,
+   constrained, with a divider above the author block. */
+body.magazine-article main > .section:has(.author-profile),
+body.magazine-article main > .section:has(.social-links) {
+  max-width: 740px;
+  margin-inline: auto;
+}
+
+body.magazine-article main > .section:has(.author-profile) {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #ebebeb;
+}
+
+/* Center the social-links row under the author on articles. */
+body.magazine-article main .social-links .social-links-list {
+  justify-content: center;
+}
