@@ -27,6 +27,7 @@
 }
 
 /* --- Option (excat-generated): minimal-dark-withimg-1 — borderless image-led cards --- */
+
 /* Additive: absent → default bordered cards; present → flush image cards, no border/box. */
 .cards.minimal-dark-withimg-1 > ul > li {
   border: 0;
@@ -35,4 +36,67 @@
 
 .cards.minimal-dark-withimg-1 .cards-card-body {
   margin: 12px 0 0;
+}
+
+/* --- Option: minimal-dark — WKND "related stories / up next" list ---
+   Text-only stacked list: article title + publication date, single column.
+   No images, no card box; each item carries a light vertical accent bar.
+   Values extracted from wknd.site .cmp-list--upnext computed styles.
+   Scoped to .cards.minimal-dark so the base cards grid is untouched. */
+.cards.minimal-dark > ul {
+  display: block;
+  grid-template-columns: none;
+  gap: 0;
+  margin: 18px 0;
+  padding: 0;
+}
+
+.cards.minimal-dark > ul > li {
+  border: 0;
+  background-color: transparent;
+  margin: 0 0 18px;
+}
+
+.cards.minimal-dark > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+/* Item body carries the accent bar + inner padding (source: a.cmp-list__item-link) */
+.cards.minimal-dark .cards-card-body {
+  margin: 0;
+  padding: 8px 16px;
+  border-left: 5px solid rgb(235 235 235);
+}
+
+/* Title (source: span.cmp-list__item-title) — uppercase body font, not the link blue */
+.cards.minimal-dark .cards-card-body h3 {
+  margin: 0;
+  padding: 5px;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.cards.minimal-dark .cards-card-body h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cards.minimal-dark .cards-card-body h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Date (source: span.cmp-list__item-date) */
+.cards.minimal-dark .cards-card-body p {
+  margin: 0;
+  padding: 5px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgb(105 105 105);
 }

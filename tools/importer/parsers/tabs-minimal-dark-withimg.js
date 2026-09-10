@@ -41,7 +41,7 @@ export default function parse(element, { document }) {
   }
 
   const block = WebImporter.Blocks.createBlock(document, {
-    name: 'tabs-minimal-dark-withimg',
+    name: 'tabs (minimal-dark-withimg)',
     cells,
   });
   element.replaceWith(block);

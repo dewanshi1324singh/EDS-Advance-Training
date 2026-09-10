@@ -33,7 +33,7 @@ export default function parse(element, { document }) {
   }
 
   const block = WebImporter.Blocks.createBlock(document, {
-    name: 'carousel-minimal-dark-withimg',
+    name: 'carousel (minimal-dark-withimg)',
     cells,
   });
   element.replaceWith(block);

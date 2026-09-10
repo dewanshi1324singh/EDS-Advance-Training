@@ -153,11 +153,82 @@
 }
 
 /* --- Options (excat-generated): minimal image-forward adventure carousel --- */
-/* WKND adventure hero carousels are image-led banners with a shorter aspect;
-   additive and tolerant — absent options fall back to the default carousel. */
+
+/* WKND adventure hero carousels are full-bleed image banners with a fixed
+   400px image height (source: wknd.site .cmp-carousel, mobile + desktop).
+   Additive and tolerant — absent options fall back to the default carousel. */
+
+/* Full-bleed: escape the 1200px section content width so the banner spans the
+   full viewport, matching the WKND source (block x:0, width = viewport). */
+.carousel-wrapper:has(> .carousel.minimal-dark-withimg),
+.carousel-wrapper:has(> .carousel.minimal-dark-withimg-1),
+.carousel-wrapper:has(> .carousel.minimal-dark-withimg-2),
+.carousel-wrapper:has(> .carousel.minimal-dark-withimg-3) {
+  max-width: 100% !important;
+  padding: 0;
+}
+
+/* Fixed image height — source image is 400px tall at every breakpoint.
+   Option overrides intentionally follow the base rules (folded-variant pattern). */
+/* stylelint-disable no-descending-specificity */
 .carousel.minimal-dark-withimg .carousel-slide,
 .carousel.minimal-dark-withimg-1 .carousel-slide,
 .carousel.minimal-dark-withimg-2 .carousel-slide,
 .carousel.minimal-dark-withimg-3 .carousel-slide {
-  min-height: min(42vw, 520px);
+  min-height: 400px;
 }
+
+/* Square, edge-to-edge image cover with no radius (source: object-fit cover,
+   border-radius 0, object-position 50% 50%). */
+.carousel.minimal-dark-withimg .carousel-slide-image picture > img,
+.carousel.minimal-dark-withimg-1 .carousel-slide-image picture > img,
+.carousel.minimal-dark-withimg-2 .carousel-slide-image picture > img,
+.carousel.minimal-dark-withimg-3 .carousel-slide-image picture > img {
+  object-position: 50% 50%;
+  border-radius: 0;
+}
+
+/* Single-slide adventure banner: the authored content cell is empty, so EDS
+   renders an empty dark content box — hide it so only the image shows. */
+.carousel.minimal-dark-withimg .carousel-slide-content:empty,
+.carousel.minimal-dark-withimg-1 .carousel-slide-content:empty,
+.carousel.minimal-dark-withimg-2 .carousel-slide-content:empty,
+.carousel.minimal-dark-withimg-3 .carousel-slide-content:empty {
+  display: none;
+}
+
+/* Indicator dots — match WKND source (10px solid dark dots, 14px apart,
+   centered). Only shown for multi-slide carousels. */
+.carousel.minimal-dark-withimg .carousel-slide-indicators,
+.carousel.minimal-dark-withimg-1 .carousel-slide-indicators,
+.carousel.minimal-dark-withimg-2 .carousel-slide-indicators,
+.carousel.minimal-dark-withimg-3 .carousel-slide-indicators {
+  gap: 0 14px;
+  padding: 9px 0 0;
+  background-color: transparent;
+}
+
+.carousel.minimal-dark-withimg .carousel-slide-indicator button,
+.carousel.minimal-dark-withimg-1 .carousel-slide-indicator button,
+.carousel.minimal-dark-withimg-2 .carousel-slide-indicator button,
+.carousel.minimal-dark-withimg-3 .carousel-slide-indicator button {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0 0 0 / 40%);
+}
+
+.carousel.minimal-dark-withimg .carousel-slide-indicator button:disabled,
+.carousel.minimal-dark-withimg .carousel-slide-indicator button:hover,
+.carousel.minimal-dark-withimg .carousel-slide-indicator button:focus-visible,
+.carousel.minimal-dark-withimg-1 .carousel-slide-indicator button:disabled,
+.carousel.minimal-dark-withimg-1 .carousel-slide-indicator button:hover,
+.carousel.minimal-dark-withimg-1 .carousel-slide-indicator button:focus-visible,
+.carousel.minimal-dark-withimg-2 .carousel-slide-indicator button:disabled,
+.carousel.minimal-dark-withimg-2 .carousel-slide-indicator button:hover,
+.carousel.minimal-dark-withimg-2 .carousel-slide-indicator button:focus-visible,
+.carousel.minimal-dark-withimg-3 .carousel-slide-indicator button:disabled,
+.carousel.minimal-dark-withimg-3 .carousel-slide-indicator button:hover,
+.carousel.minimal-dark-withimg-3 .carousel-slide-indicator button:focus-visible {
+  background-color: rgb(0 0 0 / 80%);
+}
+/* stylelint-enable no-descending-specificity */

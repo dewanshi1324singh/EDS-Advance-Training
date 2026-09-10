@@ -56,18 +56,37 @@
   display: none;
 }
 
-/* --- Options (excat-generated): WKND minimal tab treatments --- */
+/* --- Options (excat-generated): WKND minimal-dark tab treatment ---
+   Extracted from wknd.site adventure tabs. The active tab is a DARK FILLED
+   pill (dark bg + white uppercase label); inactive tabs are dark uppercase
+   labels on a transparent background. Panels are borderless with no padding. */
+.tabs.minimal-dark-withimg .tabs-list,
+.tabs.minimal-dark-withimg-1 .tabs-list,
+.tabs.minimal-dark-withimg-2 .tabs-list,
+.tabs.minimal-dark-withimg-3 .tabs-list,
+.tabs.minimal-dark-withimg-5 .tabs-list,
+.tabs.minimal-dark-withimg-6 .tabs-list {
+  gap: 0;
+  margin: 18px 0;
+  font-size: 14px;
+}
 
-/* Additive/tolerant — absent options render the default bordered tabs. The WKND
-   adventure tabs read as underline-style tabs with borderless panels. */
 .tabs.minimal-dark-withimg .tabs-list button,
 .tabs.minimal-dark-withimg-1 .tabs-list button,
 .tabs.minimal-dark-withimg-2 .tabs-list button,
 .tabs.minimal-dark-withimg-3 .tabs-list button,
 .tabs.minimal-dark-withimg-5 .tabs-list button,
 .tabs.minimal-dark-withimg-6 .tabs-list button {
+  flex: 0 0 max-content;
   border: 0;
+  padding: 8px 16px;
   background-color: transparent;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .tabs.minimal-dark-withimg .tabs-list button[aria-selected='true'],
@@ -76,7 +95,9 @@
 .tabs.minimal-dark-withimg-3 .tabs-list button[aria-selected='true'],
 .tabs.minimal-dark-withimg-5 .tabs-list button[aria-selected='true'],
 .tabs.minimal-dark-withimg-6 .tabs-list button[aria-selected='true'] {
-  border-bottom: 2px solid currentcolor;
+  border-bottom: 0;
+  background-color: var(--dark-color);
+  color: #fff;
 }
 
 .tabs.minimal-dark-withimg .tabs-panel,
@@ -85,6 +106,19 @@
 .tabs.minimal-dark-withimg-3 .tabs-panel,
 .tabs.minimal-dark-withimg-5 .tabs-panel,
 .tabs.minimal-dark-withimg-6 .tabs-panel {
+  margin-top: 0;
   border: 0;
-  padding: 24px 0;
+  padding: 0;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+}
+
+.tabs.minimal-dark-withimg .tabs-panel img,
+.tabs.minimal-dark-withimg-1 .tabs-panel img,
+.tabs.minimal-dark-withimg-2 .tabs-panel img,
+.tabs.minimal-dark-withimg-3 .tabs-panel img,
+.tabs.minimal-dark-withimg-5 .tabs-panel img,
+.tabs.minimal-dark-withimg-6 .tabs-panel img {
+  width: 100%;
+  object-fit: cover;
 }
