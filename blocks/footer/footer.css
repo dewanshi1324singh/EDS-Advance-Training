@@ -1,20 +1,136 @@
+/* WKND footer — mobile-first. Dark bar (#202020) with light text, WKND logo,
+   footer nav, Follow Us social icons, and a legal/copyright block. */
+
 footer {
-  background-color: var(--light-color);
+  background-color: var(--dark-color);
+  color: #ebebeb;
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
-  margin: auto;
+footer .footer {
   max-width: 1200px;
+  margin: auto;
   padding: 40px 24px 24px;
 }
 
 footer .footer p {
-  margin: 0;
+  margin: 0 0 12px;
 }
 
+/* base link + more-specific section link rules below intentionally follow it */
+/* stylelint-disable no-descending-specificity */
+footer .footer a:any-link {
+  color: #ebebeb;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Brand + footer nav --- */
+footer .footer-brand img {
+  width: 128px;
+  height: auto;
+  display: block;
+  margin-bottom: 24px;
+}
+
+footer .footer-brand ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* --- Follow Us + social icons --- */
+footer .footer-social {
+  margin-top: 24px;
+}
+
+footer .footer-social h4 {
+  margin: 0 0 12px;
+  color: #ebebeb;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+footer .footer-social ul {
+  display: flex;
+  gap: 8px;
+}
+
+footer .footer-social li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  transition: opacity 0.2s;
+}
+
+footer .footer-social li a:hover {
+  opacity: 0.8;
+}
+
+footer .footer-social img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* --- Legal / copyright --- */
+footer .footer-legal {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+footer .footer-legal a:any-link {
+  color: #ebebeb;
+  text-decoration: underline;
+}
+
+/* --- Desktop (>= 900px): brand row spread, social top-right --- */
 @media (width >= 900px) {
-  footer .footer > div {
+  footer .footer {
     padding: 40px 32px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'brand social'
+      'legal legal';
+    column-gap: 32px;
+  }
+
+  footer .footer-brand {
+    grid-area: brand;
+  }
+
+  footer .footer-social {
+    grid-area: social;
+    margin-top: 0;
+    text-align: right;
+  }
+
+  footer .footer-social ul {
+    justify-content: flex-end;
+  }
+
+  footer .footer-legal {
+    grid-area: legal;
   }
 }
+
+/* stylelint-enable no-descending-specificity */

@@ -21,11 +21,17 @@
     "imageCount": 1
   },
   "options": [],
-  "memberVariantIds": ["tabs-minimal-dark-withimg-4"],
+  "memberVariantIds": [
+    "tabs-minimal-dark-withimg-4"
+  ],
   "usage": {
     "pagesUsing": [
-      { "url": "https://wknd.site/ca/en/adventures.html", "screenshot": ".blocks/tabs-minimal-dark-withimg-4/screenshots/block-26d96870301d.jpg" }
+      {
+        "url": "https://wknd.site/ca/en/adventures.html",
+        "screenshot": ".blocks/tabs-minimal-dark-withimg-4/screenshots/block-26d96870301d.jpg"
+      }
     ],
-    "reuseCount": 1
+    "reuseCount": 2,
+    "lastUsed": "2026-09-10T07:29:21.180Z"
   }
 }

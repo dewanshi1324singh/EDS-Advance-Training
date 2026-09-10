@@ -113,6 +113,17 @@
   font-size: var(--body-font-size-m);
 }
 
+/* Panel body copy — match source Overview text (18px, generous leading) */
+.tabs.minimal-dark-withimg .tabs-panel p,
+.tabs.minimal-dark-withimg-1 .tabs-panel p,
+.tabs.minimal-dark-withimg-2 .tabs-panel p,
+.tabs.minimal-dark-withimg-3 .tabs-panel p,
+.tabs.minimal-dark-withimg-5 .tabs-panel p,
+.tabs.minimal-dark-withimg-6 .tabs-panel p {
+  font-size: 18px;
+  line-height: 2.5;
+}
+
 .tabs.minimal-dark-withimg .tabs-panel img,
 .tabs.minimal-dark-withimg-1 .tabs-panel img,
 .tabs.minimal-dark-withimg-2 .tabs-panel img,

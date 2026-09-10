@@ -1,54 +1,115 @@
 /*
- * tabs-minimal-dark-withimg-4 — structural CSS only (excat-generated).
- * Forked variant: styles are scoped to .tabs-minimal-dark-withimg-4 only, never the base tabs class.
- * Filter bar over a responsive image-card grid. No brand tokens; design pass handles those.
+ * tabs-minimal-dark-withimg-4 — design pass.
+ * Values extracted from wknd.site/ca/en/adventures .tabs.panelcontainer computed styles.
+ * Forked variant: all rules scoped to .tabs-minimal-dark-withimg-4 (never the base .tabs class).
+ * A horizontal filter bar (dark active pill) over a responsive image-card grid.
  */
+
+/* ---------- Filter bar ---------- */
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
-  margin: 0 0 24px;
+  gap: 0;
+  margin: 18px 0 24px;
   padding: 0;
 }
 
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-filter {
   margin: 0;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border: 0;
+  border-radius: 0;
   background-color: transparent;
-  font-weight: 700;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-filter[aria-selected='true'] {
-  background-color: currentcolor;
+  background-color: var(--dark-color);
+  color: #fff;
 }
 
+/* ---------- Card grid ---------- */
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 32px 14px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card[hidden] {
   display: none;
 }
 
+/* ---------- Card image ---------- */
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card-image {
   line-height: 0;
 }
 
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card-image img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 13 / 10;
   object-fit: cover;
 }
 
+/* ---------- Card body ---------- */
 .tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card-body {
   margin-top: 12px;
+}
+
+/* Title: dark, semibold, uppercase (source .cmp-image-list__item-title).
+   EDS auto-decorates <strong><a> into a.button.primary — reset the pill box. */
+.tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card-body p:first-child {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card-body p:first-child a.button:any-link {
+  display: inline;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: normal;
+  overflow: visible;
+}
+
+.tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card-body p:first-child a.button:any-link:hover {
+  background-color: transparent;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Description: uppercase grey (source .cmp-image-list__item-description) */
+.tabs-minimal-dark-withimg-4 .tabs-minimal-dark-withimg-4-card-body p:last-child {
+  margin: 16px 0 0;
+  color: rgb(105 105 105);
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
 }
 
 @media (width >= 600px) {

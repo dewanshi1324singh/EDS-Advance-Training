@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity -- folded-variant option rules intentionally follow base rules */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -98,7 +99,7 @@
   display: block;
   width: 100%;
   height: auto;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 0;
 }
 
@@ -107,3 +108,84 @@
     padding: 0 32px;
   }
 }
+
+/* --- minimal-dark-withimg-5: full-bleed photo with overlapping white text panel --- */
+
+/* Source: wknd.site/ca/en/adventures "Experience the world with us" teaser.
+   Full-bleed landscape image (2:1) with a centered white content panel pulled up
+   over the bottom of the image (panel bottom aligns with image bottom). Heading +
+   body copy sit top-left inside the panel with whitespace beneath.
+   Resets the base hero's absolute full-bleed picture + padding + min-height. */
+.hero.minimal-dark-withimg-5 {
+  position: relative;
+  display: block;
+  padding: 0;
+  min-height: 0;
+}
+
+.hero.minimal-dark-withimg-5 picture {
+  position: static;
+  z-index: auto;
+  inset: auto;
+  display: block;
+  width: 100%;
+}
+
+.hero.minimal-dark-withimg-5 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+/* image row (row 1) — no spacing */
+.hero.minimal-dark-withimg-5 > div:first-child,
+.hero.minimal-dark-withimg-5 > div:first-child > div {
+  margin: 0;
+  padding: 0;
+}
+
+/* white text panel (row 2) — overlaps bottom of image, centered */
+.hero.minimal-dark-withimg-5 > div:last-child {
+  position: relative;
+  box-sizing: border-box;
+  max-width: var(--content-width, 1200px);
+  margin: -80px auto 0;
+  background-color: var(--background-color);
+  padding: 0 24px;
+}
+
+.hero.minimal-dark-withimg-5 > div:last-child > div {
+  margin: 0;
+  padding: 18px 4px 32px;
+}
+
+.hero.minimal-dark-withimg-5 h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  color: var(--text-color);
+}
+
+.hero.minimal-dark-withimg-5 p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 31.5px;
+  color: var(--text-color);
+}
+
+@media (width >= 900px) {
+  .hero.minimal-dark-withimg-5 > div:last-child {
+    margin-top: -180px;
+    padding: 0 28px;
+  }
+
+  .hero.minimal-dark-withimg-5 > div:last-child > div {
+    padding: 18px 0 68px;
+  }
+}
+
+/* stylelint-enable no-descending-specificity */

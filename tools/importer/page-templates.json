@@ -11,7 +11,81 @@
       ],
       "coverageGaps": [],
       "description": "Content page with a page title followed by multiple underlined section headings, each introducing a grid of circular-image profile cards with name, role, and social icons.",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "cards-minimal-dark-withimg-2",
+          "instances": [
+            ".cmp-layout-container--fixed .cmp-container",
+            ".aem-Grid:has(.cmp-experience-fragment--contributor)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "name": "Page title",
+          "selector": [
+            ".title.cmp-title--underline",
+            ".title"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".title.cmp-title--underline"
+          ]
+        },
+        {
+          "id": "s2",
+          "name": "Our Contributors heading + intro",
+          "selector": [
+            ".cmp-title",
+            ".title"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".text",
+            ".title"
+          ]
+        },
+        {
+          "id": "s3",
+          "name": "Contributors profile-card grid",
+          "selector": [
+            ".cmp-layout-container--fixed .cmp-container"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-minimal-dark-withimg-2"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s4",
+          "name": "WKND Guides heading + intro",
+          "selector": [
+            ".cmp-title",
+            ".title"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".text"
+          ]
+        },
+        {
+          "id": "s5",
+          "name": "Guides profile-card grid",
+          "selector": [
+            ".cmp-layout-container--fixed .cmp-container"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-minimal-dark-withimg-2"
+          ],
+          "defaultContent": []
+        }
+      ]
     },
     {
       "name": "adventure-detail",
@@ -150,7 +224,76 @@
       ],
       "coverageGaps": [],
       "description": "Category landing page with a page title, a hero banner with overlaid text panel, and a filterable grid of image teaser cards below.",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero-minimal-dark-withimg-5",
+          "instances": [
+            ".teaser.cmp-teaser--hero",
+            ".teaser"
+          ]
+        },
+        {
+          "name": "tabs-minimal-dark-withimg-4",
+          "instances": [
+            ".tabs.panelcontainer",
+            ".tabs .cmp-tabs"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "name": "Page title",
+          "selector": [
+            ".title.cmp-title--underline",
+            ".title"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".title.cmp-title--underline"
+          ]
+        },
+        {
+          "id": "s2",
+          "name": "Hero banner",
+          "selector": [
+            ".teaser.cmp-teaser--hero",
+            ".teaser"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-minimal-dark-withimg-5"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s3",
+          "name": "Current Adventures section heading",
+          "selector": [
+            ".cmp-title:not(.cmp-title--underline)",
+            ".title"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".title"
+          ]
+        },
+        {
+          "id": "s4",
+          "name": "Filterable adventure card grid",
+          "selector": [
+            ".tabs.panelcontainer",
+            ".tabs"
+          ],
+          "style": null,
+          "blocks": [
+            "tabs-minimal-dark-withimg-4"
+          ],
+          "defaultContent": []
+        }
+      ]
     },
     {
       "name": "faq-page",
@@ -160,7 +303,83 @@
       ],
       "coverageGaps": [],
       "description": "Two-column page with a title, lead image and intro text, an accordion of expandable question rows in the main column, and a supporting text panel in the right sidebar.",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "accordion",
+          "instances": [
+            ".accordion.panelcontainer",
+            ".accordion"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "name": "Page title",
+          "selector": [
+            ".title.cmp-title--underline",
+            ".title"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".title.cmp-title--underline",
+            ".cmp-title__text"
+          ]
+        },
+        {
+          "id": "s2",
+          "name": "Lead image",
+          "selector": [
+            ".image.aem-GridColumn--default--8",
+            ".image"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".image"
+          ]
+        },
+        {
+          "id": "s3",
+          "name": "Intro paragraph",
+          "selector": [
+            ".text.aem-GridColumn--default--8",
+            ".text"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".text"
+          ]
+        },
+        {
+          "id": "s4",
+          "name": "FAQ accordion",
+          "selector": [
+            ".accordion.panelcontainer",
+            ".accordion"
+          ],
+          "style": null,
+          "blocks": [
+            "accordion"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s5",
+          "name": "Need more help sidebar",
+          "selector": [
+            ".aem-GridColumn--default--3",
+            "aside"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".aem-GridColumn--default--3"
+          ]
+        }
+      ]
     },
     {
       "name": "homepage",
@@ -179,7 +398,110 @@
       ],
       "coverageGaps": [],
       "description": "Locale landing page with a full-width carousel hero, a featured-article split panel, and multiple horizontal teaser/card grids separated by underlined section headings.",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "carousel-minimal-dark-withimg",
+          "instances": [
+            ".carousel.cmp-carousel--mini",
+            ".carousel.panelcontainer",
+            ".carousel"
+          ]
+        },
+        {
+          "name": "columns-minimal-dark-withimg",
+          "instances": [
+            ".teaser.cmp-teaser--featured"
+          ]
+        },
+        {
+          "name": "cards-minimal-dark-withimg",
+          "instances": [
+            ".image-list.list",
+            ".cmp-image-list"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "name": "Hero carousel",
+          "selector": [
+            ".carousel.panelcontainer",
+            ".carousel"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-minimal-dark-withimg"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s2",
+          "name": "Featured Article split",
+          "selector": [
+            ".teaser.cmp-teaser--featured"
+          ],
+          "style": "grey",
+          "blocks": [
+            "columns-minimal-dark-withimg"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s3",
+          "name": "Recent Articles teaser grid",
+          "selector": [
+            ".image-list.list",
+            ".cmp-image-list"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-minimal-dark-withimg"
+          ],
+          "defaultContent": [
+            ".title"
+          ]
+        },
+        {
+          "id": "s4",
+          "name": "Next Adventures heading",
+          "selector": [
+            ".title"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".title"
+          ]
+        },
+        {
+          "id": "s5",
+          "name": "Climbing New Zealand split",
+          "selector": [
+            ".teaser.cmp-teaser--hero:not(.carousel .teaser)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".teaser.cmp-teaser--hero"
+          ]
+        },
+        {
+          "id": "s6",
+          "name": "Where do you want to go grid",
+          "selector": [
+            ".image-list.list",
+            ".cmp-image-list"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-minimal-dark-withimg"
+          ],
+          "defaultContent": [
+            ".title"
+          ]
+        }
+      ]
     },
     {
       "name": "article-page",
