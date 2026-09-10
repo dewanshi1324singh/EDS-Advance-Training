@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity -- folded-variant option rules intentionally follow base rules */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -100,3 +101,166 @@
   text-transform: uppercase;
   color: rgb(105 105 105);
 }
+
+/* --- Option: minimal-dark-withimg — WKND image-list teaser grid ("Recent Articles") ---
+   Source: ul.cmp-image-list on wknd.site/ca/en.html — computed styles extracted.
+   4-column borderless teaser cards: image on top, uppercase bold title link, muted
+   description. Scoped to .cards.minimal-dark-withimg so the base cards grid is untouched. */
+.cards.minimal-dark-withimg > ul {
+  grid-template-columns: 1fr;
+  gap: 32px 14px;
+}
+
+@media (width >= 900px) {
+  .cards.minimal-dark-withimg > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Borderless, flush image cards (source li: no border, transparent bg) */
+.cards.minimal-dark-withimg > ul > li {
+  border: 0;
+  background-color: transparent;
+}
+
+/* Image: 13/10 aspect (source 260x200), cover crop, no radius */
+.cards.minimal-dark-withimg > ul > li img {
+  aspect-ratio: 13 / 10;
+  object-fit: cover;
+}
+
+/* Body flush to image with a small gap (source gap image->title: 9px) */
+.cards.minimal-dark-withimg .cards-card-body {
+  margin: 9px 0 0;
+}
+
+/* Title (source span.cmp-image-list__item-title): uppercase, bold, body font,
+   dark text — NOT the link blue. Reset any EDS button/link decoration. */
+.cards.minimal-dark-withimg .cards-card-body h3 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.cards.minimal-dark-withimg .cards-card-body h3 a:any-link {
+  color: inherit;
+  font: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+}
+
+.cards.minimal-dark-withimg .cards-card-body h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Description (source span.cmp-image-list__item-description): muted grey, 14/21 */
+.cards.minimal-dark-withimg .cards-card-body p {
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: rgb(105 105 105);
+}
+
+/* --- Option: minimal-dark-withimg-2 — WKND "Our Contributors / Guides" profile cards ---
+   Source: section.cmp-experience-fragment--contributor on wknd.site/ca/en/about-us.html.
+   Centered cards: large circular photo, serif name, uppercase role, and a row of
+   3 dark social-icon squares. Multi-column grid. All values from computed styles.
+   Scoped to .cards.minimal-dark-withimg-2 so the base cards grid is untouched. */
+
+/* Grid: mobile 1 col; desktop 4 cols. Source cards abut (gap 0) — inner card
+   padding (9px 14px 18px) provides the separation. */
+.cards.minimal-dark-withimg-2 > ul {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (width >= 900px) {
+  .cards.minimal-dark-withimg-2 > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card: borderless, transparent, centered content (source li) */
+.cards.minimal-dark-withimg-2 > ul > li {
+  border: 0;
+  background-color: transparent;
+  padding: 9px 14px 18px;
+  text-align: center;
+}
+
+/* Image cell: circular photo 164x164, cover crop, centered (source img) */
+.cards.minimal-dark-withimg-2 .cards-card-image {
+  display: flex;
+  justify-content: center;
+}
+
+.cards.minimal-dark-withimg-2 > ul > li img {
+  width: 164px;
+  height: 164px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Body flush to image (source gap image->name: 0) */
+.cards.minimal-dark-withimg-2 .cards-card-body {
+  margin: 0;
+}
+
+/* Name (source h3): Asar serif, 24/36, regular, dark, centered */
+.cards.minimal-dark-withimg-2 .cards-card-body h3 {
+  margin: 0 0 6px;
+  padding: 0;
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Role (source h5): Source Sans Pro, 14/21, semibold, uppercase, dark, centered */
+.cards.minimal-dark-withimg-2 .cards-card-body p {
+  margin: 0 0 4px;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Social row (built in cards.js): 3 dark squares, touching, centered, ~22px below role */
+.cards.minimal-dark-withimg-2 .cards-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.cards.minimal-dark-withimg-2 .cards-social a:any-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-color);
+  color: rgb(235 235 235);
+  text-decoration: none;
+}
+
+.cards.minimal-dark-withimg-2 .cards-social a img {
+  width: 20px;
+  height: 20px;
+}
+
+/* stylelint-enable no-descending-specificity */

@@ -307,7 +307,8 @@ main > .section:first-of-type {
 
 /* section metadata */
 main .section.light,
-main .section.highlight {
+main .section.highlight,
+main .section.grey {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
@@ -326,10 +327,19 @@ main .section.dark a:any-link {
 
 /* --- WKND global design (extracted from wknd.site) --- */
 
-/* Body copy — Source Sans Pro, comfortable leading */
+/* Body copy — Source Sans Pro, comfortable leading (WKND uses ~18px with airy leading) */
 main p {
+  font-size: var(--body-font-size-m);
+  line-height: 1.8;
+}
+
+/* Article byline (h4 "By ...") — sans-serif uppercase, not the Asar serif heading treatment */
+main > .section > div > h4 {
+  font-family: var(--body-font-family);
   font-size: var(--body-font-size-s);
-  line-height: 1.6;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* WKND signature: yellow accent underline beneath section headings in default content */
