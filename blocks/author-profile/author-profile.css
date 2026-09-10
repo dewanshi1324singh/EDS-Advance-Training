@@ -1,0 +1,79 @@
+/*
+ * Author Profile — WKND contributor card: circular avatar, serif name,
+ * uppercase role, optional social links. Centered, mobile-first.
+ */
+.author-profile .author-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.author-profile .author-profile-avatar {
+  width: 164px;
+  height: 164px;
+}
+
+.author-profile .author-profile-avatar img {
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.author-profile .author-profile-name {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.author-profile .author-profile-title {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-color);
+}
+
+.author-profile .author-profile-social {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.author-profile .author-profile-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-color);
+  color: #ebebeb;
+  text-decoration: none;
+  font-size: var(--body-font-size-xs);
+}
+
+/* horizontal layout on wider screens */
+@media (width >= 600px) {
+  .author-profile .author-profile-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    max-width: none;
+    gap: 24px;
+  }
+
+  .author-profile .author-profile-social {
+    justify-content: flex-start;
+  }
+}

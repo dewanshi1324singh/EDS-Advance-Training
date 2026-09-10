@@ -1,0 +1,65 @@
+# Query index configuration for WKND.
+#
+# NOTE: per this project's AGENTS.md, helix-query.yaml is considered "retired" —
+# the effective query-index config is expected to live at tools.aem.live. This
+# file is committed to satisfy the migration requirement and document the index
+# shape; to actually take effect on .aem.page/.aem.live it may need to be
+# mirrored into the config service (tools.aem.live) for this site.
+version: 1
+
+indices:
+  # Magazine articles — one row per magazine article page.
+  magazine:
+    include:
+      - '/*/*/magazine/**'
+    exclude:
+      - '/*/*/magazine'          # section landing pages, not articles
+      - '/*/*/magazine/members-only'
+    target: /magazine/query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      author:
+        select: head > meta[name="author"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, 'content')
+      publisheddate:
+        select: head > meta[name="publisheddate"]
+        value: attribute(el, 'content')
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, 'content')
+      lastModified:
+        select: none
+        value: parseTimestamp(headers('last-modified'), 'ddd, DD MMM YYYY hh:mm:ss GMT')
+
+  # Site-wide default index (all published pages).
+  default:
+    include:
+      - '/**'
+    exclude:
+      - '/drafts/**'
+      - '/tools/**'
+    target: /query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, 'content')
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, 'content')
+      lastModified:
+        select: none
+        value: parseTimestamp(headers('last-modified'), 'ddd, DD MMM YYYY hh:mm:ss GMT')
