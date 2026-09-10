@@ -1,0 +1,30 @@
+{
+  "variantName": "footer",
+  "baseBlock": "footer",
+  "canonicalModel": "configuration",
+  "version": "1.0.0",
+  "created": "2026-09-09T12:19:26.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/ca/en.html",
+    "discoveredDuring": "site-catalog",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "moderate",
+    "imagePattern": "noimg",
+    "purpose": "site-footer",
+    "structure": "brand + footer nav links + social icons + legal text"
+  },
+  "contentPattern": {
+    "structure": "footer fragment reference with brand, links, social, copyright"
+  },
+  "options": [],
+  "memberVariantIds": ["footer-global"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd.site/ca/en.html", "screenshot": ".blocks/footer-global/screenshots/block-26424ca3b7fd.jpg" }
+    ],
+    "reuseCount": 1
+  }
+}

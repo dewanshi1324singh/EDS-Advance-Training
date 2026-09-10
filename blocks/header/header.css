@@ -270,3 +270,8 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/* header block class (EDS wraps the nav in .header.block) — ensure block-scoped layout applies */
+.header.block {
+  width: 100%;
+}

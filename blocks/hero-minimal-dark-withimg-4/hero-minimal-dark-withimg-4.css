@@ -1,0 +1,43 @@
+/*
+ * hero-minimal-dark-withimg-4 — structural CSS only (excat-generated).
+ * Forked variant scoped to .hero-minimal-dark-withimg-4 only (never the base hero class).
+ * Section heading over a responsive image-card grid. No brand tokens.
+ */
+.hero-minimal-dark-withimg-4 .hero-minimal-dark-withimg-4-heading {
+  margin: 0 0 24px;
+}
+
+.hero-minimal-dark-withimg-4 .hero-minimal-dark-withimg-4-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-minimal-dark-withimg-4 .hero-minimal-dark-withimg-4-card-image {
+  line-height: 0;
+}
+
+.hero-minimal-dark-withimg-4 .hero-minimal-dark-withimg-4-card-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.hero-minimal-dark-withimg-4 .hero-minimal-dark-withimg-4-card-body {
+  margin-top: 12px;
+}
+
+@media (width >= 600px) {
+  .hero-minimal-dark-withimg-4 .hero-minimal-dark-withimg-4-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .hero-minimal-dark-withimg-4 .hero-minimal-dark-withimg-4-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

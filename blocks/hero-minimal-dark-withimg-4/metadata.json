@@ -1,0 +1,31 @@
+{
+  "variantName": "hero-minimal-dark-withimg-4",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-09T12:26:57.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/ca/en/magazine/members-only.html",
+    "discoveredDuring": "site-catalog",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "imagePattern": "multiple",
+    "purpose": "heading-card-grid",
+    "structure": "section heading + grid of image/title/description cards"
+  },
+  "contentPattern": {
+    "structure": "optional heading row; following rows: image + text cards",
+    "imageCount": 2
+  },
+  "options": [],
+  "memberVariantIds": ["hero-minimal-dark-withimg-4"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd.site/ca/en/magazine/members-only.html", "screenshot": ".blocks/hero-minimal-dark-withimg-4/screenshots/block-ff05b04fbbca.jpg" }
+    ],
+    "reuseCount": 1
+  }
+}

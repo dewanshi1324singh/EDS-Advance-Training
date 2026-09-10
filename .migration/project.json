@@ -1,0 +1,14 @@
+{
+  "type": "da",
+  "sites": {
+    "eds-advance-training": {
+      "previewOrg": "dewanshi1324singh",
+      "previewSite": "eds-advance-training",
+      "contentHostUrl": "https://content.da.live/dewanshi1324singh/eds-advance-training/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  },
+  "features": [
+    "site-planning"
+  ]
+}

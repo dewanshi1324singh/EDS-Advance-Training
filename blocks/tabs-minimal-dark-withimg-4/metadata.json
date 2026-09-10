@@ -1,0 +1,31 @@
+{
+  "variantName": "tabs-minimal-dark-withimg-4",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-09T12:25:16.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/ca/en/adventures.html",
+    "discoveredDuring": "site-catalog",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "imagePattern": "multiple",
+    "purpose": "filterable-card-grid",
+    "structure": "filter bar + grid of image/title/description cards"
+  },
+  "contentPattern": {
+    "structure": "row 1: filter labels; following rows: image + text cards",
+    "imageCount": 1
+  },
+  "options": [],
+  "memberVariantIds": ["tabs-minimal-dark-withimg-4"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd.site/ca/en/adventures.html", "screenshot": ".blocks/tabs-minimal-dark-withimg-4/screenshots/block-26d96870301d.jpg" }
+    ],
+    "reuseCount": 1
+  }
+}

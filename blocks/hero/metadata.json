@@ -1,0 +1,35 @@
+{
+  "variantName": "hero",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-09T12:20:51.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/ca/en/faqs.html",
+    "discoveredDuring": "site-catalog",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "imagePattern": "large",
+    "purpose": "hero-banner",
+    "structure": "large image with optional heading overlay"
+  },
+  "contentPattern": {
+    "structure": "one row: image and/or heading",
+    "imageCount": 1
+  },
+  "options": [
+    { "class": "minimal-dark-withimg", "label": "Minimal Dark Withimg" },
+    { "class": "minimal-dark-withimg-1", "label": "Minimal Dark Withimg 1" },
+    { "class": "minimal-dark-withimg-3", "label": "Minimal Dark Withimg 3" }
+  ],
+  "memberVariantIds": ["hero-minimal-dark-withimg", "hero-minimal-dark-withimg-1", "hero-minimal-dark-withimg-2", "hero-minimal-dark-withimg-3"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd.site/ca/en/faqs.html", "screenshot": ".blocks/hero-minimal-dark-withimg-2/screenshots/block-9abc2ce460c5.jpg" }
+    ],
+    "reuseCount": 1
+  }
+}

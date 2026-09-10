@@ -35,3 +35,32 @@
     padding: 40px 32px;
   }
 }
+/* --- Options (excat-generated): minimal-dark image-forward hero variants --- */
+/* Each option is additive and tolerant: absent → default hero; present → layout tweak only.
+   Structural/functional only — brand color/typography deferred to the design pass. */
+.hero.minimal-dark-withimg,
+.hero.minimal-dark-withimg-1,
+.hero.minimal-dark-withimg-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.hero.minimal-dark-withimg picture,
+.hero.minimal-dark-withimg-1 picture,
+.hero.minimal-dark-withimg-3 picture {
+  position: static;
+  z-index: auto;
+  inset: auto;
+  width: 100%;
+}
+
+@media (width >= 900px) {
+  .hero.minimal-dark-withimg,
+  .hero.minimal-dark-withimg-1,
+  .hero.minimal-dark-withimg-3 {
+    gap: 24px;
+  }
+}
