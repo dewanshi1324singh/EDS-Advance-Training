@@ -35,7 +35,7 @@ export default function parse(element, { document }) {
   }
 
   const block = WebImporter.Blocks.createBlock(document, {
-    name: 'breadcrumbs-minimal-dark',
+    name: 'breadcrumbs (minimal-dark)',
     cells,
   });
   element.replaceWith(block);

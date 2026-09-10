@@ -35,7 +35,9 @@
     padding: 40px 32px;
   }
 }
+
 /* --- Options (excat-generated): minimal-dark image-forward hero variants --- */
+
 /* Each option is additive and tolerant: absent → default hero; present → layout tweak only.
    Structural/functional only — brand color/typography deferred to the design pass. */
 .hero.minimal-dark-withimg,
@@ -62,5 +64,46 @@
   .hero.minimal-dark-withimg-1,
   .hero.minimal-dark-withimg-3 {
     gap: 24px;
+  }
+}
+
+/* --- minimal-dark-withimg-2: content-width lead article image (image only) --- */
+
+/* Source: wknd.site magazine article lead image. Sits in normal flow, aligned to
+   the article content column, preserving the image's natural aspect ratio (no crop).
+   Fully resets the base hero's absolute full-bleed + object-fit:cover treatment. */
+.hero.minimal-dark-withimg-2 {
+  position: static;
+  max-width: var(--content-width, 1200px);
+  min-height: 0;
+  margin: 7px auto;
+  padding: 0 24px;
+}
+
+.hero.minimal-dark-withimg-2 > div,
+.hero.minimal-dark-withimg-2 > div > div {
+  margin: 0;
+  padding: 0;
+}
+
+.hero.minimal-dark-withimg-2 picture {
+  position: static;
+  z-index: auto;
+  inset: auto;
+  display: block;
+  width: 100%;
+}
+
+.hero.minimal-dark-withimg-2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  border-radius: 0;
+}
+
+@media (width >= 900px) {
+  .hero.minimal-dark-withimg-2 {
+    padding: 0 32px;
   }
 }

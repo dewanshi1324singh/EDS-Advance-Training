@@ -63,7 +63,7 @@ var CustomImportScript = (() => {
       return;
     }
     const block = WebImporter.Blocks.createBlock(document2, {
-      name: "breadcrumbs-minimal-dark",
+      name: "breadcrumbs (minimal-dark)",
       cells
     });
     element.replaceWith(block);
@@ -88,7 +88,7 @@ var CustomImportScript = (() => {
       return;
     }
     const block = WebImporter.Blocks.createBlock(document2, {
-      name: "carousel-minimal-dark-withimg",
+      name: "carousel (minimal-dark-withimg)",
       cells
     });
     element.replaceWith(block);
@@ -119,7 +119,7 @@ var CustomImportScript = (() => {
       return;
     }
     const block = WebImporter.Blocks.createBlock(document2, {
-      name: "tabs-minimal-dark-withimg",
+      name: "tabs (minimal-dark-withimg)",
       cells
     });
     element.replaceWith(block);

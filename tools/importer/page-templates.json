@@ -199,7 +199,105 @@
       ],
       "coverageGaps": [],
       "description": "Long-form article with a full-width image hero, title and byline, a two-column layout of body copy with subheadings and inline images plus a right sidebar of related-story links, and an author footer.",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero-minimal-dark-withimg-2",
+          "instances": [
+            ".cmp-layout-container--fixed .image.aem-GridColumn--default--12",
+            ".image.aem-GridColumn--default--12"
+          ]
+        },
+        {
+          "name": "breadcrumbs-minimal-dark",
+          "instances": [
+            ".breadcrumb.aem-GridColumn",
+            ".breadcrumb"
+          ]
+        },
+        {
+          "name": "columns-minimal-dark-withimg",
+          "instances": [
+            ".experiencefragment:not(.aem-GridColumn) .cmp-experiencefragment",
+            ".cmp-experiencefragment--jacob-wester"
+          ]
+        },
+        {
+          "name": "cards-minimal-dark",
+          "instances": [
+            "aside.cmp-layoutcontainer--sidebar .cmp-container",
+            "aside[class*=sidebar] .cmp-container"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "name": "Hero image",
+          "selector": [
+            ".cmp-layout-container--fixed .image.aem-GridColumn--default--12",
+            ".image.aem-GridColumn--default--12"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-minimal-dark-withimg-2"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s2",
+          "name": "Breadcrumb",
+          "selector": [
+            ".breadcrumb.aem-GridColumn",
+            ".breadcrumb"
+          ],
+          "style": null,
+          "blocks": [
+            "breadcrumbs-minimal-dark"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s3",
+          "name": "Article body",
+          "selector": [
+            ".aem-GridColumn--default--8 .cmp-container",
+            "main.aem-GridColumn--default--8"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".aem-GridColumn--default--8 .cmp-container"
+          ]
+        },
+        {
+          "id": "s4",
+          "name": "Author byline footer",
+          "selector": [
+            ".experiencefragment:not(.aem-GridColumn) .cmp-experiencefragment",
+            ".cmp-experiencefragment--jacob-wester"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-minimal-dark-withimg"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s5",
+          "name": "Related stories sidebar",
+          "selector": [
+            "aside.cmp-layoutcontainer--sidebar",
+            "aside[class*=sidebar]"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-minimal-dark"
+          ],
+          "defaultContent": [
+            "aside.cmp-layoutcontainer--sidebar h2, aside.cmp-layoutcontainer--sidebar h3"
+          ]
+        }
+      ]
     }
   ],
   "metadata": {
