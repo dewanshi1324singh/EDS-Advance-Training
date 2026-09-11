@@ -277,10 +277,7 @@
 .carousel.minimal-dark-withimg-1 .carousel-navigation-buttons,
 .carousel.minimal-dark-withimg-2 .carousel-navigation-buttons,
 .carousel.minimal-dark-withimg-3 .carousel-navigation-buttons {
-  top: auto;
-  bottom: -56px;
-  left: auto;
-  right: 32px;
+  inset: auto 32px -56px auto;
   transform: none;
   width: auto;
   gap: 24px;
