@@ -175,7 +175,7 @@
 .carousel.minimal-dark-withimg-1 .carousel-slide,
 .carousel.minimal-dark-withimg-2 .carousel-slide,
 .carousel.minimal-dark-withimg-3 .carousel-slide {
-  min-height: 400px;
+  min-height: 640px;
 
   /* Bottom-align content so the white text band overlaps the image bottom. */
   justify-content: flex-end;
