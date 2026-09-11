@@ -43,10 +43,10 @@ header nav .nav-utility {
   justify-content: flex-end;
   gap: 16px;
   margin: 0 -24px;
-  padding: 8px 24px;
+  padding: 4px 24px;
   background-color: var(--dark-color);
   color: #fff;
-  font-size: var(--body-font-size-xs);
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -62,7 +62,7 @@ header nav .nav-utility p {
 }
 
 header nav .nav-utility img {
-  width: 20px;
+  width: 18px;
   height: auto;
 }
 
@@ -169,9 +169,10 @@ header nav .nav-sections ul {
 
 header nav .nav-sections ul > li {
   padding: 12px 0;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: normal;
 }
 
 header nav .nav-sections ul > li > a:any-link:hover {

@@ -231,4 +231,25 @@
 .carousel.minimal-dark-withimg-3 .carousel-slide-indicator button:focus-visible {
   background-color: rgb(0 0 0 / 80%);
 }
+
+/* Hero text card: WKND uses a solid white card with dark text overlapping the
+   image bottom-left (source: .cmp-teaser__content — white bg, #202020 text),
+   not the default dark translucent box. Only applies to slides that have
+   authored content (empty content boxes stay hidden by the rule above). */
+.carousel.minimal-dark-withimg .carousel-slide-content:not(:empty),
+.carousel.minimal-dark-withimg-1 .carousel-slide-content:not(:empty),
+.carousel.minimal-dark-withimg-2 .carousel-slide-content:not(:empty),
+.carousel.minimal-dark-withimg-3 .carousel-slide-content:not(:empty) {
+  background-color: #fff;
+  color: var(--text-color);
+  padding: 28px 32px;
+}
+
+.carousel.minimal-dark-withimg .carousel-slide-content:not(:empty) h2,
+.carousel.minimal-dark-withimg-1 .carousel-slide-content:not(:empty) h2,
+.carousel.minimal-dark-withimg-2 .carousel-slide-content:not(:empty) h2,
+.carousel.minimal-dark-withimg-3 .carousel-slide-content:not(:empty) h2 {
+  margin-top: 0;
+  color: var(--text-color);
+}
 /* stylelint-enable no-descending-specificity */
