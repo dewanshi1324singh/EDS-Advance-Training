@@ -158,7 +158,9 @@
   text-decoration: underline;
 }
 
-/* Description (source span.cmp-image-list__item-description): muted grey, 14/21 */
+/* Description (source span.cmp-image-list__item-description): muted grey, 14/21.
+   Clamp to 3 lines so long teasers (e.g. the Yosemite adventure) don't leave
+   the grid ragged — keeps every card a uniform height, matching the source. */
 .cards.minimal-dark-withimg .cards-card-body p {
   margin: 16px 0 0;
   font-family: var(--body-font-family);
@@ -166,6 +168,10 @@
   font-weight: 400;
   line-height: 21px;
   color: rgb(105 105 105);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* --- Option: minimal-dark-withimg-2 — WKND "Our Contributors / Guides" profile cards ---
