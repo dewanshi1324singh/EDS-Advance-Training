@@ -344,6 +344,27 @@ main .section.banner img {
   object-fit: cover;
 }
 
+/* Feature overlay (WKND "Climbing New Zealand"): the text sits on a white card
+   that overlaps the bottom of the banner image above it — same treatment as the
+   hero card. Pull the card up so it covers the lower ~180px of the banner. */
+/* stylelint-disable no-descending-specificity */
+main .section.banner + .section.feature-overlay {
+  position: relative;
+  z-index: 1;
+  margin-top: -140px;
+  padding-top: 0;
+}
+
+main .section.banner + .section.feature-overlay > .default-content-wrapper {
+  background-color: #fff;
+  padding: 40px 32px 8px;
+}
+
+main .section.banner + .section.feature-overlay > .default-content-wrapper > *:first-child {
+  margin-top: 0;
+}
+/* stylelint-enable no-descending-specificity */
+
 main .section.dark a:any-link {
   color: #fff;
 }
@@ -383,6 +404,7 @@ main > .section > div > h2 {
 /* Constrain the article's default-content column to a comfortable reading
    width, while leaving block sections (hero image, author-profile, etc.)
    free to size themselves. */
+/* stylelint-disable-next-line no-descending-specificity */
 body.magazine-article main > .section > .default-content-wrapper {
   max-width: 740px;
   margin-inline: auto;
