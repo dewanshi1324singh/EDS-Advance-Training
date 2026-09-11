@@ -2,10 +2,18 @@
    locale) above a white main bar (logo, nav links, search). Nav links get a
    yellow accent on hover. Breakpoints: 600 / 900 / 1200 (min-width only). */
 
+/* Sticky header: the <header> element is a direct child of <body>, so making
+   it sticky pins it to the top of the viewport on scroll (source: wknd.site
+   header is position:fixed at top). */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
 header .nav-wrapper {
   width: 100%;
-  z-index: 2;
-  position: fixed;
+  z-index: 20;
   background-color: var(--background-color);
 }
 
@@ -212,10 +220,6 @@ header nav[aria-expanded='true'] {
 
 /* --- Desktop (>= 900px): single flex row, utility bar spans full width --- */
 @media (width >= 900px) {
-  header .nav-wrapper {
-    position: relative;
-  }
-
   header nav {
     display: grid;
     grid-template:
