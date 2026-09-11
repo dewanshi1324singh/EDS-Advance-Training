@@ -269,4 +269,48 @@
 .carousel.minimal-dark-withimg-3 .carousel-slide-content:not(:empty) .button {
   text-transform: uppercase;
 }
+
+/* Prev/Next arrows: WKND places them at the bottom-right of the carousel
+   (below the slide image, near the indicator dots row), as plain outline
+   arrows — not circular overlays centered on the image sides. */
+.carousel.minimal-dark-withimg .carousel-navigation-buttons,
+.carousel.minimal-dark-withimg-1 .carousel-navigation-buttons,
+.carousel.minimal-dark-withimg-2 .carousel-navigation-buttons,
+.carousel.minimal-dark-withimg-3 .carousel-navigation-buttons {
+  top: auto;
+  bottom: -56px;
+  left: auto;
+  right: 32px;
+  transform: none;
+  width: auto;
+  gap: 24px;
+}
+
+.carousel.minimal-dark-withimg .carousel-navigation-buttons button,
+.carousel.minimal-dark-withimg-1 .carousel-navigation-buttons button,
+.carousel.minimal-dark-withimg-2 .carousel-navigation-buttons button,
+.carousel.minimal-dark-withimg-3 .carousel-navigation-buttons button {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+}
+
+.carousel.minimal-dark-withimg .carousel-navigation-buttons button:hover,
+.carousel.minimal-dark-withimg .carousel-navigation-buttons button:focus-visible,
+.carousel.minimal-dark-withimg-1 .carousel-navigation-buttons button:hover,
+.carousel.minimal-dark-withimg-1 .carousel-navigation-buttons button:focus-visible,
+.carousel.minimal-dark-withimg-2 .carousel-navigation-buttons button:hover,
+.carousel.minimal-dark-withimg-2 .carousel-navigation-buttons button:focus-visible,
+.carousel.minimal-dark-withimg-3 .carousel-navigation-buttons button:hover,
+.carousel.minimal-dark-withimg-3 .carousel-navigation-buttons button:focus-visible {
+  background-color: transparent;
+}
+
+/* Arrow glyph in dark (source: thin dark chevrons, not white-on-dark) */
+.carousel.minimal-dark-withimg .carousel-navigation-buttons button::after,
+.carousel.minimal-dark-withimg-1 .carousel-navigation-buttons button::after,
+.carousel.minimal-dark-withimg-2 .carousel-navigation-buttons button::after,
+.carousel.minimal-dark-withimg-3 .carousel-navigation-buttons button::after {
+  border-color: var(--text-color);
+}
 /* stylelint-enable no-descending-specificity */
