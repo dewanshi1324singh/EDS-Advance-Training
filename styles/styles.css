@@ -321,6 +321,28 @@ main .section.dark {
   padding: 40px 0;
 }
 
+/* Full-bleed banner image (WKND "Climbing New Zealand" teaser): the image
+   escapes the content width and crops to a fixed banner height, matching the
+   source (full viewport width, ~640px tall, object-fit cover). */
+main .section.banner {
+  padding: 0;
+}
+
+main .section.banner > .default-content-wrapper {
+  max-width: none;
+  margin: 0;
+  line-height: 0;
+}
+
+main .section.banner picture,
+main .section.banner img {
+  display: block;
+  width: 100%;
+  height: 640px;
+  margin: 0;
+  object-fit: cover;
+}
+
 main .section.dark a:any-link {
   color: #fff;
 }
