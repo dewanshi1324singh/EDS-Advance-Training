@@ -331,6 +331,7 @@ main .section.banner {
 main .section.banner > .default-content-wrapper {
   max-width: none;
   margin: 0;
+  padding: 0;
   line-height: 0;
 }
 
