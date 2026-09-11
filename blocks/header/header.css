@@ -195,9 +195,9 @@ header nav .nav-search input {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 8px 12px;
-  border: 1px solid #dadada;
-  background-color: var(--light-color);
+  padding: 10px 14px;
+  border: 0;
+  background-color: rgb(235 235 235 / 54%);
   font: inherit;
   font-size: var(--body-font-size-xs);
   text-transform: uppercase;
@@ -240,7 +240,10 @@ header nav[aria-expanded='true'] {
     display: block;
     visibility: visible;
     white-space: nowrap;
-    justify-self: center;
+
+    /* WKND groups the nav links to the right, next to the search box (not
+       centered across the bar). */
+    justify-self: end;
   }
 
   header nav .nav-sections ul {
@@ -257,6 +260,6 @@ header nav[aria-expanded='true'] {
   }
 
   header nav .nav-search input {
-    width: 180px;
+    width: 166px;
   }
 }
