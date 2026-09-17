@@ -83,7 +83,16 @@ export default async function decorate(block) {
       imgWrap.className = 'article-list-card-image';
       const link = document.createElement('a');
       link.href = a.path;
-      link.append(createOptimizedPicture(a.image, a.title || '', false, [{ width: '750' }]));
+      const picture = createOptimizedPicture(a.image, a.title || '', false, [{ width: '750' }]);
+      // createOptimizedPicture doesn't set intrinsic dimensions; add explicit
+      // width/height (matching the 13:10 card crop) so the browser reserves space
+      // and avoids layout shift.
+      const img = picture.querySelector('img');
+      if (img) {
+        img.setAttribute('width', '750');
+        img.setAttribute('height', '577');
+      }
+      link.append(picture);
       imgWrap.append(link);
       li.append(imgWrap);
     }
