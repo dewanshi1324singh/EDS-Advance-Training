@@ -209,13 +209,27 @@ header nav .nav-tools {
 header nav .nav-search {
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+/* Magnifier icon inside the search box (source: WKND search glyph on the
+   left of the input). Inline SVG so no extra request. */
+header nav .nav-search::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  background: no-repeat center / contain
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23202020" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
 }
 
 header nav .nav-search input {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 10px 14px;
+  padding: 10px 14px 10px 40px; /* room for the magnifier icon on the left */
   border: 0;
   background-color: rgb(235 235 235 / 54%);
   font: inherit;
@@ -258,8 +272,9 @@ header nav[aria-expanded='true'] {
     white-space: nowrap;
 
     /* WKND groups the nav links to the right, next to the search box (not
-       centered across the bar). */
-    justify-self: end;
+       centered across the bar), vertically centered in the bar with the
+       logo and search (the mobile rule sets align-self: start). */
+    place-self: center end;
   }
 
   header nav .nav-sections ul {
