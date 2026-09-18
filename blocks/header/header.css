@@ -74,6 +74,18 @@ header nav .nav-utility img {
   height: auto;
 }
 
+/* Locale selector caret: the last utility paragraph is the language item
+   (flag + locale). Append a dropdown chevron to match the WKND source. */
+header nav .nav-utility p:last-child::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  margin-left: 2px;
+  border: solid currentcolor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+
 /* --- Hamburger (mobile only) --- */
 header nav .nav-hamburger {
   grid-area: hamburger;
