@@ -266,14 +266,16 @@ header nav[aria-expanded='true'] {
     visibility: hidden;
   }
 
-  header nav .nav-sections {
+  header nav .nav-sections,
+  header nav[aria-expanded='true'] .nav-sections {
     display: block;
     visibility: visible;
     white-space: nowrap;
 
     /* WKND groups the nav links to the right, next to the search box (not
        centered across the bar), vertically centered in the bar with the
-       logo and search (the mobile rule sets align-self: start). */
+       logo and search. The [aria-expanded] selector is included so this
+       beats the mobile-drawer rule's align-self: start (same specificity). */
     place-self: center end;
   }
 
