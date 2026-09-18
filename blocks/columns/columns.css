@@ -192,6 +192,11 @@
   line-height: 1.2;
 }
 
+/* CTA button: WKND uppercase (source: .cmp-button label) */
+.columns.featured .button {
+  text-transform: uppercase;
+}
+
 /* Image column: flush, cover-cropped to match the panel height */
 .columns.featured > div > .columns-img-col {
   line-height: 0;
